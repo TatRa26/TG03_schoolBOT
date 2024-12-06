@@ -1,89 +1,93 @@
-# Telegram-Bot for Collecting Student Data
 
-## Description
+# Telegram-бот для сбора данных учеников
 
-This Telegram bot is designed to collect student information, including their name, age, and class, and store this data in the `school_data.db` database.
+## Описание
 
-## Project Structure
+Этот Telegram-бот предназначен для сбора информации о учениках, включая их имя, возраст и класс, с последующим сохранением этих данных в базе данных `school_data.db`.
+
+## Структура проекта
 
 ```
 project/
 │
 ├── bot/
-│   ├── __init__.py       # Package initialization
-│   ├── main.py           # Main file to run the bot
-│   ├── handlers.py       # Command and message handlers
-│   ├── database.py       # Database operations
+│   ├── __init__.py       # Инициализация пакета
+│   ├── main.py           # Основной файл для запуска бота
+│   ├── handlers.py       # Обработчики команд и сообщений
+│   ├── database.py       # Операции с базой данных
 │
-├── .env                  # Environment variables file (bot token)
-├── requirements.txt      # Project dependencies list
-└── README.md             # Setup and usage instructions
+├── .env                  # Файл с переменными окружения (токен бота)
+├── requirements.txt      # Список зависимостей проекта
+└── README.md             # Инструкция по установке и использованию
 ```
 
-## Installation and Launch
+## Установка и запуск
 
-### 1. Create a Virtual Environment
+### 1. Создайте виртуальное окружение
 
-Set up a virtual environment to isolate project dependencies:
+Создайте виртуальное окружение для изоляции зависимостей проекта:
 
-
+`
 python -m venv venv
 
 
-Activate the virtual environment:
+Активируйте виртуальное окружение:
 
-- On Linux/MacOS:
-
-  source venv/bin/activate
-
-
-- On Windows:
+- На Linux/MacOS:
 
  
+  source venv/bin/activate
+ 
+
+- На Windows:
+
   venv\Scripts\activate
+  
 
+### 2. Установите зависимости
 
-### 2. Install Dependencies
-
-Ensure you are in the project directory, then install all necessary dependencies:
+Убедитесь, что вы находитесь в директории проекта, затем установите все необходимые зависимости:
 
 
 pip install -r requirements.txt
 
 
-### 3. Configure Environment Variables
+### 3. Настройте переменные окружения
 
-Create a `.env` file in the root of the project and add your bot token:
+Создайте файл `.env` в корне проекта и добавьте ваш токен бота:
 
 
 BOT_TOKEN=your_telegram_bot_token
 
 
-### 4. Run the Bot
+### 4. Запустите бота
 
-Start the Telegram bot with the following command:
+Запустите Telegram-бота командой:
 
 
 python bot/main.py
 
 
-## Usage
+## Использование
 
-- After launching the bot, send the `/start` command in Telegram.
-- The bot will prompt you for your name, age, and class.
-- Once you provide the information, the bot will save it to the `school_data.db` database.
+- После запуска бота отправьте команду `/start` в Telegram.
+- Бот запросит ваше имя, возраст и класс.
+- После ввода данных бот сохранит их в базе данных `school_data.db`.
 
-## Requirements
+## Требования
 
-- Python 3.10 or higher
-- SQLite (built-in with Python)
+- Python 3.10 или выше
+- SQLite (встроен в Python)
 
-## Notes
+## Примечания
 
-- In case of errors, ensure that the `.env` file contains the correct bot token.
-- If you encounter issues with dependencies, verify that all packages from `requirements.txt` are installed.
+- В случае ошибки убедитесь, что файл `.env` содержит правильный токен вашего бота.
+- Если у вас возникают трудности с зависимостями, убедитесь, что все пакеты из `requirements.txt` установлены.
 
-## License
+## Лицензия
 
-This project is licensed under the MIT License.
+Проект распространяется под лицензией MIT.
+
+
+
 
